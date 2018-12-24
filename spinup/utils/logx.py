@@ -179,7 +179,7 @@ class Logger:
             itr: An int, or None. Current iteration of training.
         """
         if proc_id()==0:
-            fname = 'vars.pkl' if itr is None else 'vars%d.pkl'%itr
+            fname = 'vars.pkl' if itr is None else 'vars%d.pkl'%bitr
             try:
                 joblib.dump(state_dict, osp.join(self.output_dir, fname))
             except:
